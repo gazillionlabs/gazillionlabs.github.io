@@ -1,66 +1,217 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Gazillion Labs</title>
-<style>
-body{
-font-family: Arial;
-text-align:center;
-margin-top:80px;
-background-color:#ffffff;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gazillion Labs</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --card: #ffffff;
+      --text: #111111;
+      --muted: #5f6368;
+      --border: #e5e7eb;
+      --accent: #111111;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    }
 
-.logo{
-width:200px;
-margin-bottom:30px;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-h1{
-font-size:42px;
-}
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+    }
 
-p{
-font-size:18px;
-color:#444;
-}
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 56px 24px 72px;
+      text-align: center;
+    }
 
-.section{
-margin-top:40px;
-}
-</style>
+    .logo-wrap {
+      margin-bottom: 28px;
+    }
+
+    .logo {
+      width: 150px;
+      max-width: 40vw;
+      height: auto;
+      display: inline-block;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.6rem, 6vw, 4.4rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .tagline {
+      margin: 22px auto 0;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2.3vw, 1.35rem);
+      line-height: 1.7;
+    }
+
+    .research-block {
+      margin: 52px auto 0;
+      max-width: 760px;
+    }
+
+    .section-label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .research-link {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--accent);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px 24px;
+      font-size: clamp(1rem, 2.1vw, 1.2rem);
+      font-weight: 600;
+      line-height: 1.6;
+      box-shadow: var(--shadow);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .research-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+      border-color: #d1d5db;
+    }
+
+    .focus-section {
+      margin-top: 64px;
+    }
+
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .focus-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px 20px;
+      box-shadow: var(--shadow);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .contact-section {
+      margin-top: 64px;
+    }
+
+    .contact-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .contact-value {
+      margin: 0;
+      font-size: 1.18rem;
+      color: var(--muted);
+    }
+
+    .contact-link {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.18s ease;
+    }
+
+    .contact-link:hover {
+      border-color: var(--text);
+    }
+
+    footer {
+      margin-top: 72px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 42px 18px 56px;
+      }
+
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .research-link {
+        padding: 18px 18px;
+      }
+
+      .contact-title {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <main class="page">
+    <div class="logo-wrap">
+      <img src="GitHub_Icon_500x500.png" alt="Gazillion Labs logo" class="logo" />
+    </div>
 
-<img src="GitHub_Icon_500x500.png" class="logo">
+    <h1>Gazillion Labs</h1>
 
-<h1>Gazillion Labs</h1>
+    <p class="tagline">
+      Quantitative research. Intelligent systems.<br />
+      Decentralized financial infrastructure.
+    </p>
 
-<p>AI-driven quantitative research and decentralized financial infrastructure.</p>
+    <section class="research-block">
+      <div class="section-label">Explore Research</div>
+      <a class="research-link" href="#" aria-label="Prediction Market Collateral paper">
+        Prediction Market Collateral: A Self-Exciting First-Passage Framework for DeFi Lending
+      </a>
+    </section>
 
-<div class="section">
-<h2>Focus Areas</h2>
+    <section class="focus-section">
+      <h2 class="section-label">Focus Areas</h2>
+      <div class="focus-grid">
+        <div class="focus-card">Prediction Markets</div>
+        <div class="focus-card">Quantitative Finance</div>
+        <div class="focus-card">DeFi Risk Engines</div>
+        <div class="focus-card">AI Trading Systems</div>
+      </div>
+    </section>
 
-<p>
-Prediction markets<br>
-Quantitative finance<br>
-DeFi risk engines<br>
-AI trading systems
-</p>
-</div>
+    <section class="contact-section">
+      <h2 class="contact-title">Contact</h2>
+      <p class="contact-value">
+        <a class="contact-link" href="mailto:contact@gazillionlabs.com">contact@gazillionlabs.com</a>
+      </p>
+    </section>
 
-<div class="section">
-<h2>Founder</h2>
-<p>Kunal Gaurav</p>
-</div>
-
-<div class="section">
-<h2>Contact</h2>
-<p>
-kunal@gazillionlabs.com<br>
-www.gazillionlabs.com
-</p>
-</div>
-
+    <footer>
+      © 2026 Gazillion Labs
+    </footer>
+  </main>
 </body>
 </html>
