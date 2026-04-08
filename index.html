@@ -64,7 +64,7 @@
 
     .research-block {
       margin: 52px auto 0;
-      max-width: 760px;
+      max-width: 780px;
     }
 
     .section-label {
@@ -76,25 +76,41 @@
       margin-bottom: 16px;
     }
 
+    .research-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
     .research-link {
-      display: inline-block;
+      display: block;
       text-decoration: none;
       color: var(--accent);
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 18px;
       padding: 22px 24px;
-      font-size: clamp(1rem, 2.1vw, 1.2rem);
+      font-size: clamp(1rem, 2vw, 1.14rem);
       font-weight: 600;
       line-height: 1.6;
       box-shadow: var(--shadow);
       transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      text-align: left;
     }
 
     .research-link:hover {
       transform: translateY(-2px);
       box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
       border-color: #d1d5db;
+    }
+
+    .research-meta {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--muted);
     }
 
     .focus-section {
@@ -187,9 +203,18 @@
 
     <section class="research-block">
       <div class="section-label">Explore Research</div>
-      <a class="research-link" href="#" aria-label="Prediction Market Collateral paper">
-        Prediction Market Collateral: A Self-Exciting First-Passage Framework for DeFi Lending
-      </a>
+
+      <div class="research-list">
+        <a class="research-link" href="https://dx.doi.org/10.2139/ssrn.6502723" target="_blank" rel="noopener noreferrer" aria-label="First-Passage Default Modeling for Prediction Market Collateral">
+          First-Passage Default Modeling for Prediction Market Collateral: Self-Exciting Dynamics and Adaptive Drift
+          <span class="research-meta">SSRN Working Paper</span>
+        </a>
+
+        <a class="research-link" href="https://dx.doi.org/10.2139/ssrn.6504218" target="_blank" rel="noopener noreferrer" aria-label="Optimal Transport Stress Testing and Fund-Level Risk Management for DeFi Lending Against Prediction Market Collateral">
+          Optimal Transport Stress Testing and Fund-Level Risk Management for DeFi Lending Against Prediction Market Collateral
+          <span class="research-meta">SSRN Working Paper</span>
+        </a>
+      </div>
     </section>
 
     <section class="focus-section">
